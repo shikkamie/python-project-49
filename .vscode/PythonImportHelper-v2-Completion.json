@@ -44,6 +44,23 @@
         "documentation": {}
     },
     {
+        "label": "welcome_user",
+        "importPath": "brain_games.cli",
+        "description": "brain_games.cli",
+        "isExtraImport": true,
+        "detail": "brain_games.cli",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "prompt",
+        "description": "prompt",
+        "detail": "prompt",
+        "documentation": {}
+    },
+    {
         "label": "bin_dir",
         "kind": 5,
         "importPath": ".venv.Scripts.activate_this",
@@ -129,8 +146,17 @@
         "kind": 2,
         "importPath": "brain_games.scripts.brain_games",
         "description": "brain_games.scripts.brain_games",
-        "peekOfCode": "def main():\n    print(\"Welcome to the Brain Games!\")\nif __name__ == \"__main__\":\n    main()",
+        "peekOfCode": "def main():\n    print(\"Welcome to the Brain Games!\")\nif __name__ == \"__main__\":\n    main()\n    welcome_user()",
         "detail": "brain_games.scripts.brain_games",
+        "documentation": {}
+    },
+    {
+        "label": "welcome_user",
+        "kind": 2,
+        "importPath": "brain_games.cli",
+        "description": "brain_games.cli",
+        "peekOfCode": "def welcome_user():\n    name = prompt.string(\"May I have your name? \")\n    print(f\"Hello, {name}\")",
+        "detail": "brain_games.cli",
         "documentation": {}
     }
 ]
