@@ -44,11 +44,12 @@
         "documentation": {}
     },
     {
-        "label": "welcome_user",
-        "importPath": "brain_games.cli",
-        "description": "brain_games.cli",
+        "label": "random",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "brain_games.cli",
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
         "documentation": {}
     },
     {
@@ -58,6 +59,14 @@
         "importPath": "prompt",
         "description": "prompt",
         "detail": "prompt",
+        "documentation": {}
+    },
+    {
+        "label": "welcome_user",
+        "importPath": "brain_games.cli",
+        "description": "brain_games.cli",
+        "isExtraImport": true,
+        "detail": "brain_games.cli",
         "documentation": {}
     },
     {
@@ -139,6 +148,24 @@
         "description": ".venv.Scripts.activate_this",
         "peekOfCode": "sys.prefix = base",
         "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "find_even",
+        "kind": 2,
+        "importPath": "brain_games.scripts.brain_even",
+        "description": "brain_games.scripts.brain_even",
+        "peekOfCode": "def find_even(name=\"Bill\"):\n    print('Answer \"yes\" if the number is even, otherwise answer \"no\".')\n    count_answers = 0\n    while count_answers < 3:\n        number = random.randint(1, 100)\n        print(f\"Question: {number}\")\n        answer = input(\"Your answer: \")\n        if (number % 2 == 0 and answer == \"yes\") or (\n            number % 2 != 0 and answer == \"no\"\n        ):",
+        "detail": "brain_games.scripts.brain_even",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "brain_games.scripts.brain_even",
+        "description": "brain_games.scripts.brain_even",
+        "peekOfCode": "def main():\n    print(\"Welcome to the Brain Games!\")\n    name = prompt.string(\"May I have your name? \")\n    print(f\"Hello, {name}!\")\n    find_even(name)",
+        "detail": "brain_games.scripts.brain_even",
         "documentation": {}
     },
     {
