@@ -53,12 +53,51 @@
         "documentation": {}
     },
     {
-        "label": "prompt",
-        "kind": 6,
+        "label": "run_game",
+        "importPath": "brain_games.scripts.games.engine",
+        "description": "brain_games.scripts.games.engine",
         "isExtraImport": true,
-        "importPath": "prompt",
-        "description": "prompt",
-        "detail": "prompt",
+        "detail": "brain_games.scripts.games.engine",
+        "documentation": {}
+    },
+    {
+        "label": "run_game",
+        "importPath": "brain_games.scripts.games.engine",
+        "description": "brain_games.scripts.games.engine",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.engine",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "importPath": "brain_games.scripts.games.calc",
+        "description": "brain_games.scripts.games.calc",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.calc",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "importPath": "brain_games.scripts.games.calc",
+        "description": "brain_games.scripts.games.calc",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.calc",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "importPath": "brain_games.scripts.games.evens",
+        "description": "brain_games.scripts.games.evens",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.evens",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "importPath": "brain_games.scripts.games.evens",
+        "description": "brain_games.scripts.games.evens",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.evens",
         "documentation": {}
     },
     {
@@ -67,6 +106,15 @@
         "description": "brain_games.cli",
         "isExtraImport": true,
         "detail": "brain_games.cli",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "prompt",
+        "description": "prompt",
+        "detail": "prompt",
         "documentation": {}
     },
     {
@@ -151,12 +199,57 @@
         "documentation": {}
     },
     {
-        "label": "find_even",
+        "label": "generate_question",
         "kind": 2,
-        "importPath": "brain_games.scripts.brain_even",
-        "description": "brain_games.scripts.brain_even",
-        "peekOfCode": "def find_even(name=\"Bill\"):\n    print('Answer \"yes\" if the number is even, otherwise answer \"no\".')\n    count_answers = 0\n    while count_answers < 3:\n        number = random.randint(1, 100)\n        print(f\"Question: {number}\")\n        answer = input(\"Your answer: \")\n        if (number % 2 == 0 and answer == \"yes\") or (\n            number % 2 != 0 and answer == \"no\"\n        ):",
-        "detail": "brain_games.scripts.brain_even",
+        "importPath": "brain_games.scripts.games.calc",
+        "description": "brain_games.scripts.games.calc",
+        "peekOfCode": "def generate_question():\n    operator = random.choice([\"+\", \"-\"])\n    a = random.randint(1, 100)\n    b = random.randint(1, 100)\n    if operator == \"-\" and a < b:\n        a, b = b, a\n    if operator == \"+\":\n        result = a + b\n    elif operator == \"-\":\n        result = a - b",
+        "detail": "brain_games.scripts.games.calc",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "brain_games.scripts.games.calc",
+        "description": "brain_games.scripts.games.calc",
+        "peekOfCode": "description = \"What is the result of the expression?\"\ndef generate_question():\n    operator = random.choice([\"+\", \"-\"])\n    a = random.randint(1, 100)\n    b = random.randint(1, 100)\n    if operator == \"-\" and a < b:\n        a, b = b, a\n    if operator == \"+\":\n        result = a + b\n    elif operator == \"-\":",
+        "detail": "brain_games.scripts.games.calc",
+        "documentation": {}
+    },
+    {
+        "label": "run_game",
+        "kind": 2,
+        "importPath": "brain_games.scripts.games.engine",
+        "description": "brain_games.scripts.games.engine",
+        "peekOfCode": "def run_game(game_description, generate_question):\n    name = input(\"May I have your name? \")\n    print(f\"Hello, {name}!\")\n    print(game_description)\n    correct_answers = 0\n    while correct_answers < 3:\n        question, correct_answer = generate_question()\n        print(f\"Question: {question}\")\n        answer = input(\"Your answer: \").strip()\n        if answer == correct_answer:",
+        "detail": "brain_games.scripts.games.engine",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "kind": 2,
+        "importPath": "brain_games.scripts.games.evens",
+        "description": "brain_games.scripts.games.evens",
+        "peekOfCode": "def generate_question():\n    num = random.randint(1, 100)\n    correct_answer = \"yes\" if num % 2 == 0 else \"no\"\n    return str(num), correct_answer",
+        "detail": "brain_games.scripts.games.evens",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "brain_games.scripts.games.evens",
+        "description": "brain_games.scripts.games.evens",
+        "peekOfCode": "description = 'Answer \"yes\" if the number is even, otherwise answer \"no\".'\ndef generate_question():\n    num = random.randint(1, 100)\n    correct_answer = \"yes\" if num % 2 == 0 else \"no\"\n    return str(num), correct_answer",
+        "detail": "brain_games.scripts.games.evens",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "brain_games.scripts.brain_calc",
+        "description": "brain_games.scripts.brain_calc",
+        "peekOfCode": "def main():\n    run_game(description, generate_question)",
+        "detail": "brain_games.scripts.brain_calc",
         "documentation": {}
     },
     {
@@ -164,7 +257,7 @@
         "kind": 2,
         "importPath": "brain_games.scripts.brain_even",
         "description": "brain_games.scripts.brain_even",
-        "peekOfCode": "def main():\n    print(\"Welcome to the Brain Games!\")\n    name = prompt.string(\"May I have your name? \")\n    print(f\"Hello, {name}!\")\n    find_even(name)",
+        "peekOfCode": "def main():\n    # print(\"Welcome to the Brain Games!\")\n    # name = prompt.string(\"May I have your name? \")\n    # print(f\"Hello, {name}!\")\n    # find_even(name)\n    run_game(description, generate_question)",
         "detail": "brain_games.scripts.brain_even",
         "documentation": {}
     },
