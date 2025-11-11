@@ -18,4 +18,4 @@ def generate_question():
             if b == 0:
                 result = a
 
-    return f"{a_1}, {b_1}", str(result)
+    return f"{a_1} {b_1}", str(result)
