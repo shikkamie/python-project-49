@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "1 проект на хекслете. Игры разума"
 readme = "README.md"
 requires-python = ">=3.13"
-authors = "Дмитрий"
+authors = [
+    { name = "Дмитрий", email = "shikamie@yandex.ru" }
+]
 dependencies = [
     "prompt>=0.4.1",
 ]
