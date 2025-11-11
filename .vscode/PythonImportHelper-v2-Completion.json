@@ -117,6 +117,14 @@
         "documentation": {}
     },
     {
+        "label": "run_game",
+        "importPath": "brain_games.scripts.games.engine",
+        "description": "brain_games.scripts.games.engine",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.engine",
+        "documentation": {}
+    },
+    {
         "label": "description",
         "importPath": "brain_games.scripts.games.evens",
         "description": "brain_games.scripts.games.evens",
@@ -146,6 +154,22 @@
         "description": "brain_games.scripts.games.gcd",
         "isExtraImport": true,
         "detail": "brain_games.scripts.games.gcd",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "importPath": "brain_games.scripts.games.prime",
+        "description": "brain_games.scripts.games.prime",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.prime",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "importPath": "brain_games.scripts.games.prime",
+        "description": "brain_games.scripts.games.prime",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.prime",
         "documentation": {}
     },
     {
@@ -320,6 +344,24 @@
     {
         "label": "generate_question",
         "kind": 2,
+        "importPath": "brain_games.scripts.games.prime",
+        "description": "brain_games.scripts.games.prime",
+        "peekOfCode": "def generate_question():\n    num = random.randint(1, 100)\n    correct_answer = \"yes\"\n    if num <= 1:\n        correct_answer = \"no\"\n    if num == 2:\n        correct_answer = \"yes\"\n    if num % 2 == 0:\n        correct_answer = \"no\"\n    for i in range(3, int(num**0.5), 2):",
+        "detail": "brain_games.scripts.games.prime",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "brain_games.scripts.games.prime",
+        "description": "brain_games.scripts.games.prime",
+        "peekOfCode": "description = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'\ndef generate_question():\n    num = random.randint(1, 100)\n    correct_answer = \"yes\"\n    if num <= 1:\n        correct_answer = \"no\"\n    if num == 2:\n        correct_answer = \"yes\"\n    if num % 2 == 0:\n        correct_answer = \"no\"",
+        "detail": "brain_games.scripts.games.prime",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "kind": 2,
         "importPath": "brain_games.scripts.games.progression",
         "description": "brain_games.scripts.games.progression",
         "peekOfCode": "def generate_question():\n    start = random.randint(2, 9)\n    step = random.randint(3, 8)\n    stop = start + step * 5\n    lst = list(range(start, stop, step))\n    tts = 0\n    swap = \"..\"\n    for i in lst:\n        if i % 10 == 0:\n            tts = i",
@@ -369,6 +411,15 @@
         "description": "brain_games.scripts.brain_gcd",
         "peekOfCode": "def main():\n    run_game(description, generate_question)",
         "detail": "brain_games.scripts.brain_gcd",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "brain_games.scripts.brain_prime",
+        "description": "brain_games.scripts.brain_prime",
+        "peekOfCode": "def main():\n    run_game(description, generate_question)",
+        "detail": "brain_games.scripts.brain_prime",
         "documentation": {}
     },
     {
