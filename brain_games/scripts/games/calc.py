@@ -16,5 +16,4 @@ def generate_question():
     elif operator == "-":
         result = a - b
 
-
     return f"{a} {operator} {b}", str(result)

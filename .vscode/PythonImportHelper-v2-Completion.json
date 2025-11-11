@@ -53,51 +53,11 @@
         "documentation": {}
     },
     {
-        "label": "run_game",
-        "importPath": "brain_games.scripts.games.engine",
-        "description": "brain_games.scripts.games.engine",
+        "label": "welcome_user",
+        "importPath": "brain_games.cli",
+        "description": "brain_games.cli",
         "isExtraImport": true,
-        "detail": "brain_games.scripts.games.engine",
-        "documentation": {}
-    },
-    {
-        "label": "run_game",
-        "importPath": "brain_games.scripts.games.engine",
-        "description": "brain_games.scripts.games.engine",
-        "isExtraImport": true,
-        "detail": "brain_games.scripts.games.engine",
-        "documentation": {}
-    },
-    {
-        "label": "description",
-        "importPath": "brain_games.scripts.games.calc",
-        "description": "brain_games.scripts.games.calc",
-        "isExtraImport": true,
-        "detail": "brain_games.scripts.games.calc",
-        "documentation": {}
-    },
-    {
-        "label": "generate_question",
-        "importPath": "brain_games.scripts.games.calc",
-        "description": "brain_games.scripts.games.calc",
-        "isExtraImport": true,
-        "detail": "brain_games.scripts.games.calc",
-        "documentation": {}
-    },
-    {
-        "label": "description",
-        "importPath": "brain_games.scripts.games.evens",
-        "description": "brain_games.scripts.games.evens",
-        "isExtraImport": true,
-        "detail": "brain_games.scripts.games.evens",
-        "documentation": {}
-    },
-    {
-        "label": "generate_question",
-        "importPath": "brain_games.scripts.games.evens",
-        "description": "brain_games.scripts.games.evens",
-        "isExtraImport": true,
-        "detail": "brain_games.scripts.games.evens",
+        "detail": "brain_games.cli",
         "documentation": {}
     },
     {
@@ -106,6 +66,102 @@
         "description": "brain_games.cli",
         "isExtraImport": true,
         "detail": "brain_games.cli",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "importPath": "brain_games.scripts.games.calc",
+        "description": "brain_games.scripts.games.calc",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.calc",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "importPath": "brain_games.scripts.games.calc",
+        "description": "brain_games.scripts.games.calc",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.calc",
+        "documentation": {}
+    },
+    {
+        "label": "run_game",
+        "importPath": "brain_games.scripts.games.engine",
+        "description": "brain_games.scripts.games.engine",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.engine",
+        "documentation": {}
+    },
+    {
+        "label": "run_game",
+        "importPath": "brain_games.scripts.games.engine",
+        "description": "brain_games.scripts.games.engine",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.engine",
+        "documentation": {}
+    },
+    {
+        "label": "run_game",
+        "importPath": "brain_games.scripts.games.engine",
+        "description": "brain_games.scripts.games.engine",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.engine",
+        "documentation": {}
+    },
+    {
+        "label": "run_game",
+        "importPath": "brain_games.scripts.games.engine",
+        "description": "brain_games.scripts.games.engine",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.engine",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "importPath": "brain_games.scripts.games.evens",
+        "description": "brain_games.scripts.games.evens",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.evens",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "importPath": "brain_games.scripts.games.evens",
+        "description": "brain_games.scripts.games.evens",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.evens",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "importPath": "brain_games.scripts.games.gcd",
+        "description": "brain_games.scripts.games.gcd",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.gcd",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "importPath": "brain_games.scripts.games.gcd",
+        "description": "brain_games.scripts.games.gcd",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.gcd",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "importPath": "brain_games.scripts.games.progression",
+        "description": "brain_games.scripts.games.progression",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.progression",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "importPath": "brain_games.scripts.games.progression",
+        "description": "brain_games.scripts.games.progression",
+        "isExtraImport": true,
+        "detail": "brain_games.scripts.games.progression",
         "documentation": {}
     },
     {
@@ -221,7 +277,7 @@
         "kind": 2,
         "importPath": "brain_games.scripts.games.engine",
         "description": "brain_games.scripts.games.engine",
-        "peekOfCode": "def run_game(game_description, generate_question):\n    name = input(\"May I have your name? \")\n    print(f\"Hello, {name}!\")\n    print(game_description)\n    correct_answers = 0\n    while correct_answers < 3:\n        question, correct_answer = generate_question()\n        print(f\"Question: {question}\")\n        answer = input(\"Your answer: \").strip()\n        if answer == correct_answer:",
+        "peekOfCode": "def run_game(game_description, generate_question):\n    print(\"Welcome to the Brain Games!\")\n    name = welcome_user()\n    print(game_description)\n    correct_answers = 0\n    while correct_answers < 3:\n        question, correct_answer = generate_question()\n        print(f\"Question: {question}\")\n        answer = input(\"Your answer: \").strip()\n        if answer == correct_answer:",
         "detail": "brain_games.scripts.games.engine",
         "documentation": {}
     },
@@ -244,6 +300,42 @@
         "documentation": {}
     },
     {
+        "label": "generate_question",
+        "kind": 2,
+        "importPath": "brain_games.scripts.games.gcd",
+        "description": "brain_games.scripts.games.gcd",
+        "peekOfCode": "def generate_question():\n    a = random.randint(1, 100)\n    b = random.randint(1, 100)\n    a_1 = a\n    b_1 = b\n    result = 0\n    if b == 0:\n        result = a\n    else:\n        while b != 0:",
+        "detail": "brain_games.scripts.games.gcd",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "brain_games.scripts.games.gcd",
+        "description": "brain_games.scripts.games.gcd",
+        "peekOfCode": "description = \"Find the greatest common divisor of given numbers\"\ndef generate_question():\n    a = random.randint(1, 100)\n    b = random.randint(1, 100)\n    a_1 = a\n    b_1 = b\n    result = 0\n    if b == 0:\n        result = a\n    else:",
+        "detail": "brain_games.scripts.games.gcd",
+        "documentation": {}
+    },
+    {
+        "label": "generate_question",
+        "kind": 2,
+        "importPath": "brain_games.scripts.games.progression",
+        "description": "brain_games.scripts.games.progression",
+        "peekOfCode": "def generate_question():\n    start = random.randint(2, 9)\n    step = random.randint(3, 8)\n    stop = start + step * 5\n    lst = list(range(start, stop, step))\n    tts = 0\n    swap = \"..\"\n    for i in lst:\n        if i % 10 == 0:\n            tts = i",
+        "detail": "brain_games.scripts.games.progression",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "brain_games.scripts.games.progression",
+        "description": "brain_games.scripts.games.progression",
+        "peekOfCode": "description = \"What number is missing in the progression?\"\ndef generate_question():\n    start = random.randint(2, 9)\n    step = random.randint(3, 8)\n    stop = start + step * 5\n    lst = list(range(start, stop, step))\n    tts = 0\n    swap = \"..\"\n    for i in lst:\n        if i % 10 == 0:",
+        "detail": "brain_games.scripts.games.progression",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "brain_games.scripts.brain_calc",
@@ -257,7 +349,7 @@
         "kind": 2,
         "importPath": "brain_games.scripts.brain_even",
         "description": "brain_games.scripts.brain_even",
-        "peekOfCode": "def main():\n    # print(\"Welcome to the Brain Games!\")\n    # name = prompt.string(\"May I have your name? \")\n    # print(f\"Hello, {name}!\")\n    # find_even(name)\n    run_game(description, generate_question)",
+        "peekOfCode": "def main():\n    # find_even(name)\n    run_game(description, generate_question)",
         "detail": "brain_games.scripts.brain_even",
         "documentation": {}
     },
@@ -271,11 +363,29 @@
         "documentation": {}
     },
     {
+        "label": "main",
+        "kind": 2,
+        "importPath": "brain_games.scripts.brain_gcd",
+        "description": "brain_games.scripts.brain_gcd",
+        "peekOfCode": "def main():\n    run_game(description, generate_question)",
+        "detail": "brain_games.scripts.brain_gcd",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "brain_games.scripts.brain_progression",
+        "description": "brain_games.scripts.brain_progression",
+        "peekOfCode": "def main():\n    run_game(description, generate_question)",
+        "detail": "brain_games.scripts.brain_progression",
+        "documentation": {}
+    },
+    {
         "label": "welcome_user",
         "kind": 2,
         "importPath": "brain_games.cli",
         "description": "brain_games.cli",
-        "peekOfCode": "def welcome_user():\n    name = prompt.string(\"May I have your name? \")\n    print(f\"Hello, {name}\")",
+        "peekOfCode": "def welcome_user():\n    name = prompt.string(\"May I have your name? \")\n    print(f\"Hello, {name}\")\n    return name",
         "detail": "brain_games.cli",
         "documentation": {}
     }
