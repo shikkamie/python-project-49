@@ -1,6 +1,6 @@
 import random
 
-description = "Find the greatest common divisor of given numbers"
+description = "Find the greatest common divisor of given numbers."
 
 
 def generate_question():
