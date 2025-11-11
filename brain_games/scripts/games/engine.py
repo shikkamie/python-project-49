@@ -1,6 +1,9 @@
+from brain_games.cli import welcome_user
+
+
 def run_game(game_description, generate_question):
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
+    print("Welcome to the Brain Games!")
+    name = welcome_user()
     print(game_description)
 
     correct_answers = 0
