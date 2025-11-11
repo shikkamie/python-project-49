@@ -22,5 +22,5 @@ def generate_question():
         for i in range(len(lst)):
             if lst[i] == tts:
                 swap, lst[i] = lst[i], swap
-
-    return str(lst), str(swap)
+    question = " ".join(map(str, lst))
+    return question, str(swap)
