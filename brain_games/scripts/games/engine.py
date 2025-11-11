@@ -18,7 +18,7 @@ def run_game(game_description, generate_question):
         else:
             print(
                 f"'{answer}' is wrong answer ;(."
-                "Correct answer was '{correct_answer}'."
+                f"Correct answer was '{correct_answer}'."
             )
             print(f"Let's try again, {name}!")
             return
