@@ -5,7 +5,7 @@ description = "1 проект на хекслете. Игры разума"
 readme = "README.md"
 requires-python = ">=3.13"
 authors = [
-    { name = "Дмитрий", email = "shikamie@yandex.ru" }
+    {name = "Дмитрий", email = "shikamie@yandex.ru"}
 ]
 dependencies = [
     "prompt>=0.4.1",
